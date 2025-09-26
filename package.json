@@ -6,7 +6,8 @@
   "homepage": "https://toshicoxyz.github.io/ds3",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build && cp dist/404.html",
+    "build-page": "tsc -b && vite build && cp dist/404.html",
+    "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "deploy": "gh-pages -d dist"
