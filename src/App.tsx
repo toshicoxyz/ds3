@@ -9,7 +9,7 @@ import NotFoundPage from "./pages/NotFoundPage";
 
 const App: React.FC = () => {
   return (
-    <Router basename="/ds3">
+    <Router basename={import.meta.env.BASE_URL}>
       <div className="bg-gray-100 min-h-screen flex flex-col">
         {/* Header */}
         <Header />
