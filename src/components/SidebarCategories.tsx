@@ -1,5 +1,6 @@
 // src/components/SidebarCategories.tsx
 import React, { useState, useEffect } from 'react';
+import { Link } from "react-router-dom";
 
 // SVG especial para Aironet
 const AironetSVG = (
@@ -10,9 +11,9 @@ const AironetSVG = (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <circle cx="21" cy="21" r="21" fill="white" stroke="black" strokeWidth="2"/>
+    <circle cx="21" cy="21" r="21" fill="white" stroke="black" strokeWidth="2" />
     <circle cx="21" cy="21" r="6" fill="black" />
-    <circle cx="21" cy="21" r="8" fill="white" stroke="black" strokeWidth="2"/>
+    <circle cx="21" cy="21" r="8" fill="white" stroke="black" strokeWidth="2" />
   </svg>
 );
 
@@ -29,6 +30,7 @@ const categories = [
 ];
 
 const SidebarCategories: React.FC = () => {
+  const base = import.meta.env.BASE_URL;
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
@@ -60,20 +62,24 @@ const SidebarCategories: React.FC = () => {
       {/* Lista de categorías */}
       <div className="flex flex-col space-y-2">
         {categories.map((category) => (
-          <a
+          <Link
             key={category.name}
-            href={category.url}
+            to={category.url} // ya no usamos href
             className="flex items-center p-2 rounded-lg hover:bg-gray-50 transition min-w-full gap-2"
           >
             <div className="icon-container h-6 w-6 flex items-center justify-center">
-              {typeof category.icon === 'string' ? (
-                <img src={category.icon} alt={category.name} className="max-h-full max-w-full" />
+              {typeof category.icon === "string" ? (
+                <img
+                  src={`${base}${category.icon.replace(/^\//, "")}`} // asegura prefijo correcto
+                  alt={category.name}
+                  className="max-h-full max-w-full"
+                />
               ) : (
                 category.icon
               )}
             </div>
             <span className="text-xs font-medium text-gray-600">{category.name}</span>
-          </a>
+          </Link>
         ))}
       </div>
     </aside>
