@@ -5,5 +5,6 @@ import tailwindcss from '@tailwindcss/vite'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(),tailwindcss()],
-  base: '/ds3/',
+  // base: '/ds3/', // GitHub Pages
+  base: '/', // Netlify
 })
