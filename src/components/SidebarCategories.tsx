@@ -17,15 +17,15 @@ const AironetSVG = (
 );
 
 const categories = [
-  { name: 'Switches', url: '/categories/switches', icon: '/src/assets/icons/Cisco.ico' },
-  { name: 'Routers/Modems', url: '/categories/routers', icon: '/src/assets/icons/TP-Link.ico' },
-  { name: 'Cámaras IP', url: '/categories/camaras-ip', icon: '/src/assets/icons/Hikvision.ico' },
+  { name: 'Switches', url: '/categories/switches', icon: '/icons/Cisco.ico' },
+  { name: 'Routers/Modems', url: '/categories/routers', icon: '/icons/TP-Link.ico' },
+  { name: 'Cámaras IP', url: '/categories/camaras-ip', icon: '/icons/Hikvision.ico' },
   { name: 'Puntos de Acceso', url: '/categories/access-points', icon: AironetSVG },
-  { name: 'Teléfonos IP', url: '/categories/telefonos-ip', icon: '/src/assets/icons/Télefono.ico' },
-  { name: 'Meraki', url: '/categories/meraki', icon: '/src/assets/icons/mariakii.ico' },
-  { name: 'Transceivers', url: '/categories/transceivers', icon: '/src/assets/icons/Transceiver.ico' },
-  { name: 'Ubiquiti', url: '/categories/ubiquiti', icon: '/src/assets/icons/Ubiquiti.ico' },
-  { name: 'AMP', url: '/categories/amp', icon: '/src/assets/icons/Aironet.ico' },
+  { name: 'Teléfonos IP', url: '/categories/telefonos-ip', icon: '/icons/Télefono.ico' },
+  { name: 'Meraki', url: '/categories/meraki', icon: '/icons/mariakii.ico' },
+  { name: 'Transceivers', url: '/categories/transceivers', icon: '/icons/Transceiver.ico' },
+  { name: 'Ubiquiti', url: '/categories/ubiquiti', icon: '/icons/Ubiquiti.ico' },
+  { name: 'AMP', url: '/categories/amp', icon: '/icons/Aironet.ico' },
 ];
 
 const SidebarCategories: React.FC = () => {

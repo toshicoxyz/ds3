@@ -1,73 +1,39 @@
-# React + TypeScript + Vite
+# 🛒 DS3 Comunicaciones - Catálogo Web
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es un **catálogo de productos tecnológicos** desarrollado con **React + TypeScript + Vite + TailwindCSS**.  
+Su objetivo es mostrar productos de redes (Cisco, AMP, Ubiquiti, etc.) con un diseño **responsivo**, moderno y fácil de usar.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📸 Capturas de pantalla
 
-## React Compiler
+### Página de detalle de producto
+![Detalle de producto Referencia](src/docs/screenshots/Screen1.png)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+> Ejemplo: Switch Cisco Catalyst 9200L Essentials C9200L-24P
 
-## Expanding the ESLint configuration
+![Detalle de producto Solicitado](src/docs/screenshots/Screen2.png)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+> Ejemplo: Cable UTP AMP Categoria 6 Chaqueta CMR 23AWG 6-1427200-4
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🚀 Tecnologías usadas
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- ⚛️ [React](https://react.dev/) (con TypeScript)
+- ⚡ [Vite](https://vitejs.dev/) (bundler)
+- 🎨 [TailwindCSS](https://tailwindcss.com/) (estilos responsivos)
+- 📦 [gh-pages](https://www.npmjs.com/package/gh-pages) (para deploy en GitHub Pages)
+- 🔗 React Router DOM (navegación SPA)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📂 Estructura del proyecto
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+```bash
+src/
+ ├─ assets/          # Imágenes, íconos y recursos
+ ├─ components/      # Componentes reutilizables (Header, Footer, Sidebar, etc.)
+ ├─ pages/           # Páginas principales (Home, ProductPage, etc.)
+ ├─ data.ts          # Base de datos local de productos
+ ├─ App.tsx          # Configuración principal de rutas
+ └─ index.css        # Estilos globales
