@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import logo from "../assets/Logo.png";
 import { FaSearch, FaShoppingCart, FaUser, FaBars, FaTimes, FaFacebookF, FaInstagram, FaTwitter, FaLinkedin, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import { Link } from "react-router-dom"
 
 const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -78,11 +79,27 @@ const Header: React.FC = () => {
 
           {/* 🔹 Links Desktop */}
           <div className="hidden lg:flex items-center justify-between flex-1 ">
-            <ul className="flex gap-15 mx-auto font-medium ">
-              <li><a href="/" className="text-gray-700 hover:text-blue-600 font-bold">Inicio</a></li>
-              <li><a href="/about" className="text-gray-700 hover:text-blue-600 font-bold">Acerca</a></li>
-              <li><a href="/shop" className="text-gray-700 hover:text-blue-600 font-bold">Tienda</a></li>
-              <li><a href="/contact" className="text-gray-700 hover:text-blue-600 font-bold">Contacto</a></li>
+            <ul className="flex gap-15 mx-auto font-medium">
+              <li>
+                <Link to="/" className="text-gray-700 hover:text-blue-600 font-bold">
+                  Inicio
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" className="text-gray-700 hover:text-blue-600 font-bold">
+                  Acerca
+                </Link>
+              </li>
+              <li>
+                <Link to="/shop" className="text-gray-700 hover:text-blue-600 font-bold">
+                  Tienda
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="text-gray-700 hover:text-blue-600 font-bold">
+                  Contacto
+                </Link>
+              </li>
             </ul>
 
             {/* 🔹 Íconos (desktop) */}

@@ -1,6 +1,7 @@
 // src/components/SimilarProducts.tsx
 import React from "react";
 import type { Product } from "../data";
+import { Link } from "react-router-dom"
 
 interface SimilarProductsProps {
   products: Product[];
@@ -21,9 +22,9 @@ const SimilarProducts: React.FC<SimilarProductsProps> = ({ products, title }) =>
         {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {products.map((product) => (
-            <a
+            <Link
               key={product.sku}
-              href={`/producto/${product.sku}`}
+              to={`/producto/${product.sku}`}
               className="group bg-white rounded-xl shadow overflow-hidden hover:shadow transition-shadow duration-300 border border-gray-200 hover:border-[#122144] flex flex-col"
             >
               <div className="p-5 flex flex-col h-full">
@@ -48,7 +49,7 @@ const SimilarProducts: React.FC<SimilarProductsProps> = ({ products, title }) =>
                   </div>
                 </div>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </div>
